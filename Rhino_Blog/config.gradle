@@ -1,0 +1,26 @@
+ext {
+    versions = [
+            springboot_version = '2.5.0',
+            fastjson_version = '1.2.33',
+            jwt_version = '0.9.0',
+            mybatisplus_version = '3.4.3',
+            mysqldriver_version = '8.0.33',
+            jax_version = '2.3.0',
+            activation_version = '1.1.1'
+    ]
+
+    libraries = [
+            "spring-boot-starter-test": "org.springframework.boot:spring-boot-starter-test:${springboot_version}",
+            "spring-boot-starter-web": "org.springframework.boot:spring-boot-starter-web:${springboot_version}",
+            "spring-boot-starter-security": "org.springframework.boot:spring-boot-starter-security:${springboot_version}",
+            "spring-boot-starter-data-redis": "org.springframework.boot:spring-boot-starter-data-redis:${springboot_version}",
+            "fastjson": "com.alibaba:fastjson:${fastjson_version}",
+            "jwt": "io.jsonwebtoken:jjwt:${jwt_version}",
+            "mybatis-plus-boot-starter": "com.baomidou:mybatis-plus-boot-starter:${mybatisplus_version}",
+            "mysql-connector-j": "com.mysql:mysql-connector-j:${mysqldriver_version}",
+            "jaxb-api": "javax.xml.bind:jaxb-api:${jax_version}",
+            "jaxb-impl": "com.sun.xml.bind:jaxb-impl:${jax_version}",
+            "jaxb-core": "com.sun.xml.bind:jaxb-core:${jax_version}",
+            "activation": "javax.activation:activation:${activation_version}"
+    ]
+}
