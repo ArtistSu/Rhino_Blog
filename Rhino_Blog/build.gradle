@@ -30,6 +30,7 @@ dependencies {
     implementation libraries."jaxb-impl"
     implementation libraries."jaxb-core"
     implementation libraries."activation"
+    implementation libraries."springfox-boot-starter"
 }
 
 subprojects {
@@ -48,6 +49,9 @@ subprojects {
         // mybatis-plus
         implementation libraries."mybatis-plus-boot-starter"
         implementation libraries."mysql-connector-j"
+        // swagger ui
+        implementation libraries."springfox-boot-starter"
+
     }
 }
 

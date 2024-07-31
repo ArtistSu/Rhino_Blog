@@ -6,7 +6,8 @@ ext {
             mybatisplus_version = '3.4.3',
             mysqldriver_version = '8.0.33',
             jax_version = '2.3.0',
-            activation_version = '1.1.1'
+            activation_version = '1.1.1',
+            springfox_boot_starter = '3.0.0'
     ]
 
     libraries = [
@@ -17,6 +18,7 @@ ext {
             "jaxb-api": "javax.xml.bind:jaxb-api:${jax_version}",
             "jaxb-impl": "com.sun.xml.bind:jaxb-impl:${jax_version}",
             "jaxb-core": "com.sun.xml.bind:jaxb-core:${jax_version}",
-            "activation": "javax.activation:activation:${activation_version}"
+            "activation": "javax.activation:activation:${activation_version}",
+            "springfox-boot-starter": "io.springfox:springfox-boot-starter:${springfox_boot_starter}"
     ]
 }
