@@ -1,6 +1,6 @@
 ext {
     versions = [
-            springboot_version = '2.5.0',
+            springboot_version = '2.7.10',
             fastjson_version = '1.2.33',
             jwt_version = '0.9.0',
             mybatisplus_version = '3.4.3',
@@ -10,10 +10,6 @@ ext {
     ]
 
     libraries = [
-            "spring-boot-starter-test": "org.springframework.boot:spring-boot-starter-test:${springboot_version}",
-            "spring-boot-starter-web": "org.springframework.boot:spring-boot-starter-web:${springboot_version}",
-            "spring-boot-starter-security": "org.springframework.boot:spring-boot-starter-security:${springboot_version}",
-            "spring-boot-starter-data-redis": "org.springframework.boot:spring-boot-starter-data-redis:${springboot_version}",
             "fastjson": "com.alibaba:fastjson:${fastjson_version}",
             "jwt": "io.jsonwebtoken:jjwt:${jwt_version}",
             "mybatis-plus-boot-starter": "com.baomidou:mybatis-plus-boot-starter:${mybatisplus_version}",

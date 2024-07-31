@@ -1,0 +1,84 @@
+plugins {
+    id 'org.springframework.boot' version '2.7.10'
+    id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+    id 'java'
+}
+
+group = 'org.allen'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+// Manage all dependencies in one file
+apply from: 'config.gradle'
+
+dependencies {
+    // jar
+    implementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+    implementation 'org.projectlombok:lombok'
+
+    implementation libraries."fastjson"
+    implementation libraries."jwt"
+    implementation libraries."mybatis-plus-boot-starter"
+    implementation libraries."mysql-connector-j"
+    implementation libraries."jaxb-api"
+    implementation libraries."jaxb-impl"
+    implementation libraries."jaxb-core"
+    implementation libraries."activation"
+}
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
+
+    dependencies {
+        // Common dependencies
+        implementation 'org.springframework.boot:spring-boot-starter-test'
+        implementation 'org.springframework.boot:spring-boot-starter-web'
+        implementation 'org.springframework.boot:spring-boot-starter-security'
+        implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+        implementation 'org.projectlombok:lombok'
+    }
+}
+
+allprojects {
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+    compileJava.options.encoding "UTF-8"
+    compileTestJava.options.encoding "UTF-8"
+    tasks.withType(JavaCompile) {
+        options.encoding = "UTF-8"
+    }
+    tasks.withType(Javadoc) {
+        options.encoding "UTF-8"
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
+
+//plugins {
+//    id 'org.springframework.boot' version '3.1.0'
+//    id 'io.spring.dependency-management' version '1.1.0'
+//    id 'java'
+//}
+//
+//repositories {
+//    mavenCentral()  // 使用 Maven Central 仓库
+//}
+//
+//dependencies {
+//    implementation 'org.springframework.boot:spring-boot-starter-web'
+//    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+//}
+//
+//tasks.named('test') {
+//    useJUnitPlatform()
+//}

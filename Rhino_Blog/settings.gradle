@@ -1,0 +1,3 @@
+rootProject.name = 'Rhino_Blog'
+include 'rhino_login'
+
