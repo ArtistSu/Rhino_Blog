@@ -7,7 +7,7 @@ ext {
             mysqldriver_version = '8.0.33',
             jax_version = '2.3.0',
             activation_version = '1.1.1',
-            springfox_boot_starter = '3.0.0'
+            springfox_boot_starter = '3.0.0',
     ]
 
     libraries = [

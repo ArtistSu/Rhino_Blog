@@ -14,6 +14,7 @@ public class LoginController {
 
     @PostMapping("/login")
     public String login(@RequestBody User user){
+        loginService.login(user);
         return "Test login controller successfully";
     }
 }

@@ -15,6 +15,8 @@ public class User {
 
     @TableId
     private Long id;
+    private String userId;
+
     private String userName;
     private String nickName;
     private String password;
@@ -37,11 +39,8 @@ public class User {
      * 1 -> User
      */
     private String userType;
-    /**
-     * The uid of creator
-     */
-    private String userId;
-
     private String createTime;
     private String updateTime;
+
+
 }
