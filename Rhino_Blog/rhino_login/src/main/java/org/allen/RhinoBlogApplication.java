@@ -9,10 +9,10 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 @SpringBootApplication
 @EnableWebMvc
 @MapperScan("org.allen.mapper")
-public class SecurityApplication {
+public class RhinoBlogApplication {
     public static void main(String[] args) {
         System.out.println(System.getProperty("java.class.path"));
-        ConfigurableApplicationContext run = SpringApplication.run(SecurityApplication.class, args);
+        ConfigurableApplicationContext run = SpringApplication.run(RhinoBlogApplication.class, args);
         System.out.println("Print anything here, and add a breakpoint here.");
     }
 }

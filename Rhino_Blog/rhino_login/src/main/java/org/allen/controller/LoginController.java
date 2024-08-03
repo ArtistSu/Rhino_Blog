@@ -1,5 +1,6 @@
 package org.allen.controller;
 
+import org.allen.entity.Response;
 import org.allen.entity.User;
 import org.allen.service.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,8 +14,7 @@ public class LoginController {
     private LoginService loginService;
 
     @PostMapping("/login")
-    public String login(@RequestBody User user){
-        loginService.login(user);
-        return "Test login controller successfully";
+    public Response login(@RequestBody User user){
+        return loginService.login(user);
     }
 }
