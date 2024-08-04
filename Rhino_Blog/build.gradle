@@ -1,6 +1,6 @@
 plugins {
     id 'org.springframework.boot' version '3.2.5'
-    id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+    id 'io.spring.dependency-management' version '1.1.5'
     id 'java'
 }
 
@@ -15,8 +15,8 @@ repositories {
 apply from: 'config.gradle'
 
 allprojects {
-    sourceCompatibility = '11'
-    targetCompatibility = '11'
+    sourceCompatibility = '17'
+    targetCompatibility = '17'
     compileJava.options.encoding "UTF-8"
     compileTestJava.options.encoding "UTF-8"
     tasks.withType(JavaCompile) {
@@ -49,7 +49,10 @@ subprojects {
         annotationProcessor 'org.projectlombok:lombok'
 
         // mybatis-plus
-        implementation libraries."mybatis-plus-boot-starter"
+        implementation libraries."mybatis-spring" // Compatibility issue
+        implementation (libraries."mybatis-plus-boot-starter") {
+            exclude group:"org.mybatis",module:"mybatis-spring"
+        }
         implementation libraries."mysql-connector-j"
 
         // swagger ui
@@ -67,7 +70,6 @@ project(':rhino_login') {
     }
 
 }
-
 
 test {
     useJUnitPlatform()

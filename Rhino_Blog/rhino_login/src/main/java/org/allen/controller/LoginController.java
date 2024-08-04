@@ -2,19 +2,26 @@ package org.allen.controller;
 
 import org.allen.entity.Response;
 import org.allen.entity.User;
-import org.allen.service.LoginService;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.allen.exception.BusinessMsgEnum;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping("/login")
 public class LoginController {
-    @Autowired
-    private LoginService loginService;
+//    @Autowired
+//    private LoginService loginService;
 
-    @PostMapping("/login")
-    public Response login(@RequestBody User user){
-        return loginService.login(user);
+    @PostMapping("/userpwd")
+    public Response login(@RequestBody User user) {
+        return new Response(BusinessMsgEnum.OK.getCode(), BusinessMsgEnum.LOGIN_SUCCESS.getMessage(), null);
+    }
+
+    @PostMapping("/submit")
+    public String handlePostRequest(@RequestBody User user) {
+        // 处理请求数据
+        return "Received data: ";
     }
 }

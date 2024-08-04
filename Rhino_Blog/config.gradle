@@ -1,13 +1,14 @@
 ext {
     versions = [
-            springboot_version = '2.7.10',
+            springboot_version = '3.2.5',
             fastjson_version = '1.2.33',
             jwt_version = '0.9.0',
-            mybatisplus_version = '3.4.3',
+            mybatisplus_version = '3.5.5',
             mysqldriver_version = '8.0.33',
             jax_version = '2.3.0',
             activation_version = '1.1.1',
             springfox_boot_starter = '3.0.0',
+            mybatis_spring = '3.0.3'
     ]
 
     libraries = [
@@ -19,6 +20,7 @@ ext {
             "jaxb-impl": "com.sun.xml.bind:jaxb-impl:${jax_version}",
             "jaxb-core": "com.sun.xml.bind:jaxb-core:${jax_version}",
             "activation": "javax.activation:activation:${activation_version}",
-            "springfox-boot-starter": "io.springfox:springfox-boot-starter:${springfox_boot_starter}"
+            "springfox-boot-starter": "io.springfox:springfox-boot-starter:${springfox_boot_starter}",
+            "mybatis-spring": "org.mybatis:mybatis-spring:${mybatis_spring}",
     ]
 }
